@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/cropper.css">
+  <title>头像裁剪并上传</title>
+</head>
+<body>
+  <div id="mainBox">
+    <!-- 上传按钮 -->
+    <div id="inputBox">
+      <label for="inputPicture">上传</label>
+      <input type="file" id="inputPicture" accept="image/*" style="display: none;">
+      <img src="" id="showImg" alt="展示图片" style="display: none;">
+    </div>
+    <!-- 图片裁剪 -->
+    <div id="containerBox" id="containerBox">
+      <canvas id="containerPicture"></canvas>
+    </div>
+    <!-- 裁剪结果 -->
+    <div class="croppedBox">
+      <img src="" id="croppedPicture" alt="展示裁剪图片" style="display: none;">
+    </div>
+  </div>
+
+  <script src="./js/cropper.js"></script>
+  <script src="./js/index.js"></script>
+  
+</body>
+</html>
