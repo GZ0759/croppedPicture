@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>第一步 上传</title>
+</head>
+<body>
+    <div id="inputBox">
+      <label for="inputPicture" id="btnText">上传</label>
+      <input type="file" id="inputPicture" accept="image/*" style="display: none;">
+    </div>
+    <script>
+      inputPic = document.getElementById("inputPicture");
+
+      // 监听input，将图片地址传递给第二个页面
+      inputPic.addEventListener("change", function() {
+        var reader = new FileReader();
+        reader.readAsDataURL(inputPic.files[0]);
+        reader.onload = function(e) {
+          sessionStorage.setItem('img',e.target.result); 
+          window.location.href="cut.html";
+        };
+        
+        // 重置input值
+        event.target.value=''
+      });
+    </script>
+</body>
+</html>

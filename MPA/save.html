@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>第三步 裁剪头像显示</title>
+</head>
+<body>
+  <div id="croppedBox">
+
+    <h4>jpg图片</h4>
+    <img id="croppedPicture" alt="展示裁剪图片">
+    <button onclick="alert(fileFileSrc)">获取图片src</button>
+    
+  </div>
+
+  <script>
+    // 获取图片地址
+    var fileFileSrc = sessionStorage.getItem('fileFile')
+    var croppedPic = document.getElementById('croppedPicture');
+    if (fileFileSrc) {
+      croppedPic.src = fileFileSrc;
+    }
+    
+  </script>
+</body>
+</html>
