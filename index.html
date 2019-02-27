@@ -12,17 +12,20 @@
   <div id="mainBox">
     <!-- 上传按钮 -->
     <div id="inputBox">
-      <label for="inputPicture">上传</label>
+      <label for="inputPicture" id="btnText">上传</label>
       <input type="file" id="inputPicture" accept="image/*" style="display: none;">
-      <img src="" id="showImg" alt="展示图片" style="display: none;">
     </div>
     <!-- 图片裁剪 -->
-    <div id="containerBox" id="containerBox">
+    <div id="containerBox">
       <canvas id="containerPicture"></canvas>
+      <div id="containerTop" style="display: none;">
+        <button id="cancel">取消</button>
+        <button id="confirm">确定</button>
+      </div>
     </div>
     <!-- 裁剪结果 -->
-    <div class="croppedBox">
-      <img src="" id="croppedPicture" alt="展示裁剪图片" style="display: none;">
+    <div id="croppedBox">
+      <img id="croppedPicture" alt="展示裁剪图片" style="display: none;">
     </div>
   </div>
 
